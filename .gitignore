@@ -1,0 +1,6 @@
+.env
+*.pyc
+celerybeat-schedule
+bin/
+lib/
+include/
