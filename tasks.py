@@ -116,7 +116,7 @@ def waveriderz():
 
     curr_forecast = soup.find('div', class_='textwidget').text
 
-    db = redis.StrictRedis.from_url(os.environ['REDISTOGO_URL'])
+    db = redis.StrictRedis.from_url(os.environ['REDISCLOUD_URL'])
     if not db.get('waveriderz_forecast'):
         logging.info('waveriderz_forecast not found in DB, storing "{}".'.format(  # noqa
             curr_forecast))
