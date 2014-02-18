@@ -106,7 +106,7 @@ def totisurf():
         logging.info('No changes.')
 
 
-@periodic_task(run_every=timedelta(seconds=15))
+@periodic_task(run_every=timedelta(seconds=600))
 def waveriderz():
     response = requests.get('http://waveriderz.wordpress.com/')
     assert response.status_code == 200
